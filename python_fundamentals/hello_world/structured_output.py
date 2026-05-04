@@ -6,7 +6,7 @@ version = 3
 pi_value = 22 / 7
 is_valid = pi_value > 3
 
-print(f"Language: {language}");
-print(f"Version: {version}");
-print(f"Pi approx: {pi_value:.2f}");
-print(f"Computation valid: {is_valid}");
+print(f"Language: {language}")
+print(f"Version: {version}")
+print(f"Pi approx: {pi_value:.2f}")
+print(f"Computation valid: {is_valid}")
