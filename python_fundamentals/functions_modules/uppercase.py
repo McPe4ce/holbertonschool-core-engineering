@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 
 def uppercase(str):
-    for letter in str:
+    for index, letter in str:
         askey = ord(letter)
 
-        if 97 <= askey <= 122:
-            print(chr(askey - 32), end="")
-        else:
-            print("{}".format(letter), end="")
+        charr = (askey - 32) if 97 <= askey <= 122 else letter
+        print(charr, end="\n" if index == len(str) - 1 else "")
