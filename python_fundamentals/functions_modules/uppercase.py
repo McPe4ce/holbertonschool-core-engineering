@@ -8,4 +8,3 @@ def uppercase(str):
             print(chr(askey - 32), end="")
         else:
             print(letter, end="")
-    print()
