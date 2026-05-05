@@ -7,4 +7,4 @@ def uppercase(str):
         if 97 <= askey <= 122:
             print(chr(askey - 32), end="")
         else:
-            print(letter, end="")
+            print("{}".format(letter), end="")
