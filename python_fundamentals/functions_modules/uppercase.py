@@ -5,4 +5,4 @@ def uppercase(str):
         askey = ord(letter)
 
         charr = (askey - 32) if 97 <= askey <= 122 else letter
-        print(charr, end="\n" if index == len(str) - 1 else "")
+        print("{}".format(charr), end="\n" if index == len(str) - 1 else "")
