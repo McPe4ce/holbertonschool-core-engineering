@@ -8,9 +8,9 @@ def print_matrix_integer(matrix=[[]]):
         for numb in range(len(row)):
 
             if numb != len(row) - 1:
-                print("{}".format(row[numb]), end=" ")
+                print("{:d}".format(row[numb]), end=" ")
             else:
-                print("{}".format(row[numb]), end="\n")
+                print("{:d}".format(row[numb]), end="\n")
 
 
 if __name__ == "__main__":
