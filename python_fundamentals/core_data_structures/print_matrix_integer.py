@@ -4,13 +4,12 @@
 
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
-
         for numb in range(len(row)):
-
             if numb != len(row) - 1:
                 print("{:d}".format(row[numb]), end=" ")
             else:
-                print("{:d}".format(row[numb]), end="\n")
+                print("{:d}".format(row[numb]), end="")
+        print()
 
 
 if __name__ == "__main__":
