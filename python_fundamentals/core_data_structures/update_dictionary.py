@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def update_dictionary(a_dictionary, key, value):
-    if key == None:
+    if key is None:
         a_dictionary[key] = dict(key, value)
     else:
         a_dictionary[key] = value
