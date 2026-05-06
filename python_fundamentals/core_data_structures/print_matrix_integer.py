@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
 # Prints a matrix of integers
-# .join allows to add a space between each string and str actually
-# turns the integers in strings for it to work
 
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
