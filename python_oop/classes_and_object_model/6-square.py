@@ -46,17 +46,18 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integer")
         for index in value:
             if not all(isinstance(index, int) or index >= 0):
-                raise TypeError("position must be tuple of 2 positive integer")
+                raise TypeError(
+                    "position must a be tuple of 2 positive integer")
         self.__position = value
 
     def __str__(self):
         result = ""
 
-        # Add vertical offset (empty lines)
+        # Add col start point
         for _ in range(self.__position[1]):
             result += "\n"
 
-        # Add the square with horizontal offset
+        # Add row start point
         for i in range(self.__size):
             result += " " * self.__position[0] + "#" * self.__size
             if i < self.__size - 1:
