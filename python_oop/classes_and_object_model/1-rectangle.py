@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
+"""Module that defines a Rectangle class."""
 
 class Rectangle:
+    """Represents a Rectangle and its height/width"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
