@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Module defines the base of the Geometric behaviors
+"""Module defines the base of the Geometric behaviors"""
 
 
 class BaseGeometry:
