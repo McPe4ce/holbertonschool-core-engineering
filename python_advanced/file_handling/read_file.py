@@ -3,5 +3,6 @@
 
 
 def read_file(filename=""):
+    """with closes the file after doing what it needs"""
     with open(f"{filename}", encoding="utf-8") as f:
         reader = f.read()
