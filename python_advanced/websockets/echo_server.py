@@ -4,13 +4,13 @@ from websockets.asyncio.server import serve
 import asyncio
 
 
-async def echo(websocket):
+async def connection_handler(websocket):
     async for message in websocket:
         await websocket.send(message)
 
 
 async def main():
-    async with serve(echo, "localhost", 8765) as server:
+    async with serve(connection_handler, "localhost", 8765) as server:
         await server.serve_forever()
 
 if __name__ == "__main__":
