@@ -3,16 +3,20 @@
 #!/usr/bin/env python3
 
 from websockets.asyncio.server import serve
+from websockets.exceptions import ConnectionClosed
 import asyncio
 
 
 async def connection_handler(websocket):
-    async for message in websocket:
-        if not message.strip():
-            print("ERR:EMPTY")
-            await websocket.send("ERR:EMPTY")
-            continue
-        await websocket.send("OK:" + message)
+    try:
+        async for message in websocket:
+            if not message.strip():
+                print("ERR:EMPTY")
+                await websocket.send("ERR:EMPTY")
+                continue
+            await websocket.send("OK:" + message)
+    except ConnectionClosed:
+        pass
 
 
 async def main():
