@@ -16,7 +16,8 @@ async def connection_handler(websocket):
             if not message.strip():
                 print("ERR:EMPTY")
                 continue
-            broadcast(connections=CONNECTIONS, message="B:" + message, raise_exceptions=False)
+            broadcast(connections=CONNECTIONS, message="B:" + message,
+                      raise_exceptions=False)
     except ConnectionClosed:
         pass
     finally:
