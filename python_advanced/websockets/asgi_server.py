@@ -6,7 +6,6 @@ from starlette.routing import WebSocketRoute, Route
 from starlette.websockets import WebSocketDisconnect
 
 
-
 async def homepage(request):
     return FileResponse("index.html")
 
@@ -22,10 +21,9 @@ async def websocket_endpoint(websocket):
             await websocket.send_text(message)
     except WebSocketDisconnect:
         pass
-        
 
 
-app = Starlette(debug=True, routes= [
+app = Starlette(debug=True, routes=[
     WebSocketRoute('/ws', websocket_endpoint),
     Route('/', homepage),
 ])
