@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-#!/usr/bin/env python3
-
 from websockets.asyncio.server import serve
 from websockets.exceptions import ConnectionClosed
 import asyncio
