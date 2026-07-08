@@ -10,6 +10,14 @@ async def homepage(request):
     return FileResponse("index.html")
 
 
+async def stylesheet(request):
+    return FileResponse("style.css")
+
+
+async def script(request):
+    return FileResponse("client.js")
+
+
 async def websocket_endpoint(websocket):
     await websocket.accept()
     try:
@@ -26,4 +34,6 @@ async def websocket_endpoint(websocket):
 app = Starlette(debug=True, routes=[
     WebSocketRoute('/ws', websocket_endpoint),
     Route('/', homepage),
+    Route('/style.css', stylesheet),
+    Route('/client.js', script),
 ])
